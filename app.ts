@@ -214,7 +214,7 @@ const sectiAVypis = (
   const result = n1 + n2;
   action(result);
 };
-// callback je fetch, která se posílá jako parametr do jiné fce
+// callback je fce, která se posílá jako parametr do jiné fce
 sectiAVypis(1, 3, (result) => {
   console.log(result);
 });
@@ -264,21 +264,21 @@ const fullAddress = getAddress({
 const partialAddress = getAddress({ street: '456 Elm St', city: 'Metropolis' });
 
 // Použijte anotaci tak, abyste byli o chybě informování na řádku 40 (const defaultVehicle = {};)
-interface Vehicle {
+interface VehicleX {
   numberOfWheels: number;
   make: string;
   VIN: string;
   isFunctional: boolean;
 }
 
-const defaultVehicle: Vehicle = {
+const defaultVehicle: VehicleX = {
   numberOfWheels: 3,
   make: 'Ford',
   VIN: '123',
   isFunctional: true,
 };
 
-const getVIN = (input: Vehicle) => {
+const getVIN = (input: VehicleX) => {
   return input.VIN;
 };
 
