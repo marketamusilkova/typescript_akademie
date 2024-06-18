@@ -127,7 +127,7 @@ const sectiAVypis = (n1, n2, action) => {
     const result = n1 + n2;
     action(result);
 };
-// callback je fetch, která se posílá jako parametr do jiné fce
+// callback je fce, která se posílá jako parametr do jiné fce
 sectiAVypis(1, 3, (result) => {
     console.log(result);
 });
